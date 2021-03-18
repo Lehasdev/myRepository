@@ -2,11 +2,19 @@ package ru.javalessons.task.guests;
 
 import ru.javalessons.task.shelter.CatsShelter;
 
-public class Cat extends CatsShelter {
+public class Cat {
 
     private float weight;
-    private String color;
+    final String color;
     private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public Cat(float weight, String color) {
         this.weight = weight;
@@ -22,19 +30,5 @@ public class Cat extends CatsShelter {
         this.weight = weight;
     }
 
-    public String getColor() {
-        return color;
-    }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 }

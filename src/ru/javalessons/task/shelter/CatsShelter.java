@@ -3,31 +3,46 @@ package ru.javalessons.task.shelter;
 import ru.javalessons.task.guests.Cat;
 
 public class CatsShelter {
-    private Cat[] rooms = new Cat[20];
+
+
+    private Cat[] rooms;
+
+    public CatsShelter(Cat[] rooms) {
+        this.rooms = rooms;
+    }
 
     private int i = 0;
 
 
-    public void putUpCat(Cat someone) {
+    public void putUpCat(Cat anyCat) {
         if (i < rooms.length) {
-            rooms[i] = someone;
-            System.out.println("Кисик " + someone.getName() + " теперь имеет кров.\nЕго комната под номером " + i);
+            rooms[i] = anyCat;
+            System.out.println("Кисик " + anyCat.getName() + " теперь имеет кров.\nЕго комната под номером " + i);
             i++;
 
+        } else {
+            System.out.println("Кисик " + rooms[0].getName() + " пришел в себя и готов покинуть приют");
+            rooms[0] = null;
+
+
+            rooms[0] = anyCat;
+            System.out.println("Кисик " + rooms[0].getName() + " теперь имеет кров.\nЕго комната под номером " + 0);
+
         }
+
     }
 
     public void feedsAllCat() {
+        final float food = 0.4f;
+        for (i = 0; i < rooms.length; i++) {
+            rooms[i].setWeight(rooms[i].getWeight() + food);
 
-        for (i = 0; i < 20; i++) {
-            if (rooms[i] != null) {
-                System.out.println("Кисик " + rooms[i].getName() + " кушает!");
-            }
+            System.out.println(rooms[i].getWeight());// хз как присвоить значение в сеттер, вызывает конструктор
+
 
         }
     }
 }
-
 
 
 

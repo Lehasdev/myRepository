@@ -5,7 +5,7 @@ import ru.javalessons.task.guests.Cat;
 
 
 public class Main {
-    private static CatsShelter shelter = new CatsShelter();
+    private static CatsShelter shelter = new CatsShelter(new Cat[2]);
 
     public static void main(String[] args) {
         Cat homelessCat = new Cat(1.3f, "Серый");
@@ -18,6 +18,7 @@ public class Main {
         homelessCat3.setName("Рома");
         shelter.putUpCat(homelessCat3);
         shelter.feedsAllCat();
+
 
 
     }
