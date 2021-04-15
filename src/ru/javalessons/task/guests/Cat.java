@@ -35,11 +35,13 @@ public class Cat {
         this.weight = result;
 
     }
-    public float eat(float x){
-        if (x<9){System.out.println("Еды не хватает, а коты голодают :(");
-        return getWeight();
 
-            }else {
+    public float eat(float x) {
+        if (x < 9) {
+            System.out.println("Еды не хватает, а коты голодают :(");
+            return getWeight();
+
+        } else {
 
 
             float result1 = x * 0.1f;// чтобы вес менялся реалистичней
@@ -47,7 +49,9 @@ public class Cat {
             setWeight(result);
             return getWeight();
 
-        }}}
+        }
+    }
+}
 
 
 
