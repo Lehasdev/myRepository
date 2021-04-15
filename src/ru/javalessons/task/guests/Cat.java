@@ -1,7 +1,5 @@
 package ru.javalessons.task.guests;
 
-import ru.javalessons.task.shelter.CatsShelter;
-
 public class Cat {
 
     private float weight;
@@ -26,9 +24,39 @@ public class Cat {
         return weight;
     }
 
-    public void setWeight(float weight) {
-        this.weight = weight;
+    public String getColor() {
+        return color;
     }
 
 
-}
+    private void setWeight(float result) {
+
+
+        this.weight = result;
+
+    }
+    public float eat(float x){
+        if (x<9){System.out.println("Еды не хватает, а коты голодают :(");
+        return getWeight();
+
+            }else {
+
+
+            float result1 = x * 0.1f;// чтобы вес менялся реалистичней
+            float result = result1 + getWeight();
+            setWeight(result);
+            return getWeight();
+
+        }}}
+
+
+
+
+
+
+
+
+
+
+
+
